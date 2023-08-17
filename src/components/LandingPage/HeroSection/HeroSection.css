@@ -1,0 +1,69 @@
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.Hero-section-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0 100px 0;
+}
+.Hero-section-left{
+    width: 40%;
+    margin-top: 100px;
+    padding: 20px 0 20px 80px;
+}
+.Hero-section-header-container{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+}
+.Hero-section-header-container > h1{
+    color: #CF5C36;
+    z-index: 3;
+    width: 750px;
+    height: 70px;
+    font-size: 75px;
+    font-family: 'Amatic SC', 'cursive';
+}
+.Hero-section-header-container > img{
+    width: 100px;
+    height: 55px;
+    position: absolute;
+    left: 650px;
+}
+.Hero-section-left > p{
+    margin-top: 120px ;
+    color: #8F8F8F;
+    width: 530px;
+    font-size: 18px;
+    font-family: 'Outfit', 'sans-serif';
+}
+.Hero-section-left > button{
+    width: 100px;
+    height: 45px;
+    background-color: #839788;
+    border-radius: 31px;
+    color: #FFFFFF;
+    margin: 30px 0;
+    font-family: 'Outfit', 'sans-serif';
+    padding: 10px;
+}
+.Hero-section-right{
+    width: 60%;
+}
+.Hero-section-right > img{
+    width: 1200px;
+    height: 800px;
+
+}
+.Hero-section-tile{
+    width: 20%;
+}
+.Hero-section-tile > img{
+    position: absolute;
+    top: 630px;
+    height: 250px;
+    width: 300px;
+}

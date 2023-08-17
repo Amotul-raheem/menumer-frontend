@@ -1,11 +1,16 @@
 import './App.css';
-import NavBar from "./components/Commons/NavBar/NavBar"
+import LandingPage from "./components/LandingPage/LandingPage"
+import HomePage from "./components/HomePage/HomePage"
+import RecipePage from "./components/RecipePage/RecipePage"
+import CreateRecipePage from "./components/CreateRecipePage/CreateRecipePage"
 
 function App() {
   return (
-    <div >
-        Hello world
-        <NavBar />
+    <div>
+        {/*<LandingPage/>*/}
+        <HomePage/>
+        {/*<RecipePage/>*/}
+        {/*<CreateRecipePage/>*/}
     </div>
   );
 }

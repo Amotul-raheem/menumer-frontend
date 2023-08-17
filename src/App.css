@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Croissant+One&family=Outfit:wght@300;400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
-    background-color: beige;
+    background-color: #F5F5F5;
+}
+img{
+    max-height: 100%;
+    max-width: 100%;
 }
