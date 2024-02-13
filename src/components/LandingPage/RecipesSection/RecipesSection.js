@@ -11,7 +11,7 @@ function RecipesSection() {
 
     return (
         <div className='flex items-center justify-center flex-col '>
-            <div className='w-1/2 text-center'>
+            <div className='w-1/2 text-center tablets:w-[80%] mini-tablet:w-[80%] laptops:w-full mobile:w-full'>
                 <h1 className='font-amaticSc text-5xl m-4 text-[#CF5C36]'>OUR RECIPES</h1>
                 <div className='flex justify-center flex-wrap px-28 py-6'>
                     {recipeTypes.map((recipeType) => (

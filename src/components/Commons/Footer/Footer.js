@@ -54,10 +54,9 @@ function Footer() {
             <hr className=' mt-5 mb-4  bg-[#D9D9D9]' />
             <div className='flex justify-end text-[#28262C] mb-4'>
                 <BiCopyright size={21}/>
-                <p className='px-1'> 2023 Menumer. All rights reserved</p>
+                <p className='px-1'> © {new Date().getFullYear()} Menumer. All rights reserved</p>
             </div>
         </div>
-        // todo make the yere adaptable to corrent year
     )
 }
 

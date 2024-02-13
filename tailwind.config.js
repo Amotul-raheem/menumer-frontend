@@ -4,6 +4,17 @@ module.exports = {
   theme: {
     extend:
         {
+            screens: {
+                'mobile': {'min': '240px', 'max': '480px'},
+
+                'mini-tablet': {'min': '481px', 'max': '768px'},
+
+                'tablets': {'min': '769px', 'max': '1023px'},
+
+                'laptops': {'min': '1024px', 'max': '1600px'},
+
+                'Desktops': {'min': '1601px'},
+            },
             fontFamily: {
                 'outfit': ['Outfit', 'sans-serif'],
                 'croissant': ['Croissant One', 'cursive'],
