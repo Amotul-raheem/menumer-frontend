@@ -6,7 +6,7 @@ function ResetPassword () {
     return(
         <div className="flex justify-center items-center h-screen">
             <div
-                className="relative bg-white h-auto w-[35%] flex flex-col  items-center px-16 py-12  shadow-box rounded-2xl">
+                className="relative bg-white h-auto w-[35%] flex flex-col  items-center px-16 py-12  shadow-box rounded-2xl mini-tablet:w-[80%] tablets:w-[80%] laptops:w-[70%]">
                 <img className="absolute -top-16 -left-28" src={CornerImage} alt=''/>
                 <h1 className='font-amaticSc text-4xl text-[#CF5C36] py-4'>RESET PASSWORD</h1>
                 <p className='font-outfit text-[#8F8F8F] text-lg text-center px-8' >Your new password will be different from previously used passwords</p>
