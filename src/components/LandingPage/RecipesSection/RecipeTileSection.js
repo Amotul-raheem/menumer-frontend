@@ -1,10 +1,10 @@
 import React from 'react';
 import RecipeTile from './RecipeTile'
 import {FiChevronLeft, FiChevronRight} from 'react-icons/fi';
-import recipe1 from '../../../images/recipe1.jpg'
-import recipe2 from '../../../images/recipe2.jpg'
-import recipe3 from '../../../images/recipe4.jpg'
+
 import "../../Commons/Carousel.css"
+import {RecipeList} from "./helper";
+import {Link} from "react-router-dom";
 
 function RecipeTileSection() {
     const carouselRef = React.useRef();
@@ -27,61 +27,18 @@ function RecipeTileSection() {
             </button>
 
             <div className='carousel mx-12' ref={carouselRef}>
-                <RecipeTile
-                    RecipeImage={recipe1}
-                    RecipeName={'Strawberry cheese cake'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-
-                <RecipeTile
-                    RecipeImage={recipe2}
-                    RecipeName={'English breakfast with bananas with'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe3}
-                    RecipeName={'Brocolli Onion salad'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe3}
-                    RecipeName={'Brocolli Onion salad'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe3}
-                    RecipeName={'Brocolli Onion salad'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe1}
-                    RecipeName={'Strawberry cheese cake'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe2}
-                    RecipeName={'English breakfast with bananas with'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe2}
-                    RecipeName={'English breakfast with bananas with'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
-                <RecipeTile
-                    RecipeImage={recipe2}
-                    RecipeName={'English breakfast with bananas with'}
-                    RecipeDescription={'Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish.'}
-                    CookTime={'1hr 10mins'}
-                />
+                {RecipeList.map((recipe) => {
+                    return(
+                        <Link to={"/recipes"}>
+                            <RecipeTile
+                                RecipeImage={recipe.RecipeImage}
+                                RecipeName={recipe.RecipeName}
+                                RecipeDescription={recipe.RecipeDescription}
+                                CookTime={recipe.CookTime}
+                            />
+                        </Link>
+                    )
+                })}
             </div>
             <button
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10"

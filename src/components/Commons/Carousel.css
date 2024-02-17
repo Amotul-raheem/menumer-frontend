@@ -6,6 +6,7 @@
     scrollbar-width: none;
     align-items: center;
     justify-content: flex-start;
+    padding: 30px 0 30px 0;
 }
 
 .carousel::-webkit-scrollbar {

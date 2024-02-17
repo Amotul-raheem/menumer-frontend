@@ -2,15 +2,15 @@ import React from 'react';
 import Vegetables7 from '../../images/Vegetables7.png'
 import AddButton from "../Commons/Button/AddButton";
 
-function CreateRecipeBody(props) {
-    const {Qty, Unit} = props
+function CreateRecipeBody() {
+
     return (
         <div className='bg-[#F5F5F5] '>
             <h1 className='font-amaticSc text-6xl m-12 text-[#CF5C36]'>CREATE RECIPE</h1>
             <div className='flex justify-center h-auto items-center my-36 '>
-                <img className="absolute right-[400px] top-[210px] z-10" src={Vegetables7} alt="vegetable"/>
+                <img className="absolute right-[400px] top-[230px] z-10 mobile:right-0 mini-tablet:right-0 tablets:right-0"  src={Vegetables7} alt="vegetable"/>
                 <div
-                    className='bg-[#FBFBFB] flex flex-col justify-center items-center shadow-box min-h-[700px] min-w-[950px] rounded-xl relative'>
+                    className='bg-[#FBFBFB] flex flex-col justify-center items-center shadow-box min-h-[700px] min-w-[950px] mini-tablet:min-w-[850px] tablets:min-w-[800px] rounded-xl relative'>
                     <div className="w-full h-full p-12">
                         <div className="flex justify-between mt-8 mb-16">
                             <h1 className="font-amaticSc text-[#CF5C36] font-bold text-2xl ">NAME OF RECIPE</h1>

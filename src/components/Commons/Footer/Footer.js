@@ -2,6 +2,7 @@ import React from 'react';
 import {BsFacebook, BsTwitter} from 'react-icons/bs'
 import {BiCopyright} from 'react-icons/bi'
 import {FaInstagramSquare} from 'react-icons/fa';
+import {Link} from "react-router-dom";
 
 
 function Footer() {
@@ -9,7 +10,7 @@ function Footer() {
         <div className='flex flex-col mx-16 mt-10'>
             <div className='flex justify-between '>
                 <div className='flex flex-col mt-24'>
-                    <h1 className='font-croissant text-xl text-[#000000] '>MENUMER</h1>
+                   <Link to={"/home"}><h1 className='font-croissant text-xl text-[#000000] '>MENUMER</h1></Link>
                     <p className='font-outfit text-[#8F8F8F] text-base my-3'>Secrets to all delicious delicacies lie
                         with us</p>
                     <div className='flex justify-between w-1/2 my-4'>
@@ -52,9 +53,9 @@ function Footer() {
                 </div>
             </div>
             <hr className=' mt-5 mb-4  bg-[#D9D9D9]' />
-            <div className='flex justify-end text-[#28262C] mb-4'>
+            <div className='flex justify-end items-center text-[#28262C] mb-4'>
                 <BiCopyright size={21}/>
-                <p className='px-1'> © {new Date().getFullYear()} Menumer. All rights reserved</p>
+                <p className='px-1'> {new Date().getFullYear()} Menumer. All rights reserved</p>
             </div>
         </div>
     )

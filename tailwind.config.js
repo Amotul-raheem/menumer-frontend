@@ -27,6 +27,7 @@ module.exports = {
                 'input': '0px 1px 3px rgba(0, 0, 0, 0.1)',
                 'box': '0px 3px 16px rgba(131, 151, 136, 0.15)',
                 'tile': '0px 4px 14px rgba(131, 151, 136, 0.15)',
+                'tile2': '0px 4px 14px rgba(0, 0, 0, 0.15)',
                 'tile-hover': '4px 8px 20px rgba(150, 160, 138, 0.5)'
             },
             backgroundImage: {

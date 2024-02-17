@@ -13,7 +13,7 @@ import '../../Commons/Carousel.css';
 function PopularRecipeTile(props) {
     const {RecipeImage, RecipeName, CookTime, RecipeDescription} = props
     return(
-        <div className='flex h-64 w-96 bg-[#F3F2F2] overflow-hidden justify-between relative shadow-tile carousel-item p-4 mx-2 cursor-pointer hover:transform hover:scale-110 hover:shadow-tile-hover transition duration-500'>
+        <div className='flex h-64 w-96 bg-[#F3F2F2] overflow-hidden justify-between relative shadow-tile2 carousel-item p-4 mx-5 cursor-pointer hover:transform hover:scale-125 hover:shadow-tile hover:z-20 transition duration-500'>
             <div className='flex flex-col justify-end'>
                 <img className='h-28 w-28 rounded-full -left-4 -top-4 absolute' src={RecipeImage}/>
                 <div className='flex justify-evenly'>

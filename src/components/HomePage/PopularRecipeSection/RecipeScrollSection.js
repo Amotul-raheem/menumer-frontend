@@ -1,12 +1,8 @@
 import React from 'react';
 import PopularRecipeTile from "./PopularRecipeTile"
 import {FiChevronLeft, FiChevronRight} from 'react-icons/fi';
-import recipe2 from '../../../images/recipe2.jpg'
-import recipe3 from '../../../images/recipe3.jpg'
-import recipe4 from '../../../images/recipe4.jpg'
-import recipe1 from '../../../images/recipe1.jpg'
-
 import "../../Commons/Carousel.css"
+import {Link} from "react-router-dom";
 
 
 
@@ -20,9 +16,9 @@ function RecipeScrollSection(props) {
             carouselRef.current.scrollBy({top: 0, left: 300, behavior: 'smooth'});
         }
     };
-    const {RecipeCategory} = props
+    const {RecipeCategory, PopularRecipeList} = props
     return (
-        <div className='mx-12  h-[350px]'>
+        <div className='mx-12  h-auto '>
             <div className='flex justify-between my-6 '>
                 <h1 className='font-amaticSc text-4xl '>{RecipeCategory}</h1>
                 <div className=''>
@@ -40,63 +36,20 @@ function RecipeScrollSection(props) {
                     </button>
                 </div>
             </div>
-            <div className='carousel ' ref={carouselRef}>
-                <PopularRecipeTile
-                    RecipeImage = {recipe2}
-                    RecipeName = {"Italian lemon chicken orzo soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
+            <div className='carousel' ref={carouselRef}>
+                {PopularRecipeList.map((recipe) => {
+                    return(
+                        <Link to={"/recipes"}>
+                            <PopularRecipeTile
+                                RecipeImage={recipe.RecipeImage}
+                                RecipeName={recipe.RecipeName}
+                                RecipeDescription={recipe.RecipeDescription}
+                                CookTime={recipe.CookTime}
+                            />
+                        </Link>
 
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe3}
-                    RecipeName = {"Italian lemon chicken orzo soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe2}
-                    RecipeName = {"Morrocan sweet potato lentil soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe3}
-                    RecipeName = {"Italian lemon chicken orzo soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe1}
-                    RecipeName = {"Italian lemon chicken orzo soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe3}
-                    RecipeName = {"Morrocan sweet potato lentil soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe4}
-                    RecipeName = {"Italian lemon chicken orzo soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
-                <PopularRecipeTile
-                    RecipeImage = {recipe1}
-                    RecipeName = {"Morrocan sweet potato lentil soup"}
-                    RecipeDescription = {"Harira is a classic Moroccan comfort soup made with tomatoes, lentils, chickpeas, fresh herbs, dried spices, and meat, making it a filling and satisfying dish."}
-                    CookTime = {"1hr 10mins"}
-
-                />
+                    )
+                })}
             </div>
 
         </div>
