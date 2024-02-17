@@ -1,10 +1,12 @@
 import CornerImage from "../../images/CornerDeco2.png";
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 function ResetPassword () {
     return(
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen relative">
+            <Link to={"/"}><h1 className='absolute top-10 left-10 text-2xl font-croissant text-[#00000]'> MENUMER. </h1></Link>
             <div
                 className="relative bg-white h-auto w-[35%] flex flex-col  items-center px-16 py-12  shadow-box rounded-2xl mini-tablet:w-[80%] tablets:w-[80%] laptops:w-[70%]">
                 <img className="absolute -top-16 -left-28" src={CornerImage} alt=''/>
